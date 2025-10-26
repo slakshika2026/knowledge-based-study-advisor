@@ -1,0 +1,10 @@
+draws_diagrams(no).
+explains_aloud(no).
+needs_practice(no).
+energy_peak(night).
+focus_span('<30_min').
+sound_preference(instrumental).
+group_size(alone).
+study_location(fixed).
+exam_priority(mcq).
+time_pressure_panic(no).
