@@ -195,7 +195,7 @@ main.pack(fill="both", expand=True, padx=20, pady=15)
 # Compact header
 header = tk.Frame(main, bg=BG)
 header.pack(fill="x", pady=(0, 12))
-tk.Label(header, text="Study Fit Advisor", font=TITLE_FONT, 
+tk.Label(header, text="Personalized Study Recommendation System", font=TITLE_FONT, 
          bg=BG, fg=TEXT_PRIMARY).pack(anchor="w")
 tk.Label(header, text="Discover your personalized learning strategy", 
          font=SUBTITLE_FONT, bg=BG, fg=TEXT_SECONDARY).pack(anchor="w", pady=(2, 0))
@@ -350,5 +350,4 @@ text_result.insert('1.0', "Your personalized study plan will appear here.\n\n"
                    "Complete all questions and click 'Generate Study Plan' to begin.", 'loading')
 text_result.config(state='disabled')
 
-print("✓ Optimized Full-Screen UI initialized")
 root.mainloop()

@@ -1,8 +1,4 @@
 
-% prolog_kb.pl - Enhanced Knowledge Base for Assignment
-% Smart Study Fit Advisor - Expert System
-% This KB contains 25+ rules and provides personalized study recommendations
-
 :- set_prolog_flag(encoding, utf8).
 
 % Dynamic facts - will be loaded from user input
@@ -10,9 +6,9 @@
 :- dynamic energy_peak/1, focus_span/1, sound_preference/1.
 :- dynamic group_size/1, study_location/1, exam_priority/1, time_pressure_panic/1.
 
-%==============================================================================
-% MAIN EXPERT SYSTEM ENTRY POINT
-%==============================================================================
+
+%------------------ MAIN EXPERT SYSTEM ENTRY POINT-------------------------
+
 generate_plan :-
     format('~n╔════════════════════════════════════════════════════════════╗~n', []),
     format('║           SMART STUDY FIT - EXPERT SYSTEM                  ║~n', []),
@@ -39,9 +35,9 @@ generate_plan :-
     
     format('╚════════════════════════════════════════════════════════════╝~n', []).
 
-%==============================================================================
-% RULE 1-5: LEARNING STYLE CLASSIFICATION (Multiple Rules)
-%==============================================================================
+
+% ------------------------RULE 1-5: LEARNING STYLE CLASSIFICATION (Multiple Rules)--------------------------
+
 analyze_learning_profile :-
     format('📚 LEARNING PROFILE ANALYSIS~n', []),
     format('─────────────────────────────────────────────────────────────~n', []),
@@ -112,9 +108,9 @@ stress_profile('High Test Anxiety - Needs stress management') :-
     time_pressure_panic(yes), !.
 stress_profile('Calm Under Pressure').
 
-%==============================================================================
-% RULE 6-10: ENVIRONMENT RECOMMENDATION
-%==============================================================================
+
+% -------------------------RULE 6-10: ENVIRONMENT RECOMMENDATION---------------------------
+
 recommend_study_environment :-
     format('🌍 RECOMMENDED STUDY ENVIRONMENT~n', []),
     format('─────────────────────────────────────────────────────────────~n', []),
@@ -173,9 +169,9 @@ recommend_materials :-
 recommend_materials :-
     format('   Materials: Notebook, highlighters, sticky notes~n', []).
 
-%==============================================================================
-% RULE 11-15: SESSION STRUCTURE (Complex conditional rules)
-%==============================================================================
+
+%----------------------- RULE 11-15: SESSION STRUCTURE (Complex conditional rules)--------------------------
+
 recommend_session_structure :-
     format('📋 RECOMMENDED SESSION STRUCTURE~n', []),
     format('─────────────────────────────────────────────────────────────~n', []),
@@ -217,9 +213,8 @@ daily_schedule('Study in afternoon (2-5 PM)') :-
     energy_peak(afternoon), !.
 daily_schedule('Flexible daily schedule').
 
-%==============================================================================
-% RULE 16-20: TECHNIQUE RECOMMENDATIONS
-%==============================================================================
+%----------------------- RULE 16-20: TECHNIQUE RECOMMENDATIONS--------------------------------
+
 recommend_techniques :-
     format('🎯 RECOMMENDED STUDY TECHNIQUES~n', []),
     format('─────────────────────────────────────────────────────────────~n', []),
@@ -260,9 +255,9 @@ review_technique('Daily review + Weekly comprehensive review') :-
     time_pressure_panic(yes), !.
 review_technique('Review after each major topic').
 
-%==============================================================================
-% RULE 21-23: TOOL RECOMMENDATIONS
-%==============================================================================
+
+% ----------------------RULE 21-23: TOOL RECOMMENDATIONS-----------------------------
+
 recommend_tools :-
     format('🛠️  RECOMMENDED TOOLS & RESOURCES~n', []),
     format('─────────────────────────────────────────────────────────────~n', []),
@@ -293,9 +288,9 @@ physical_tools('Quality notebooks, highlighters, sticky notes').
 % Online resources (1 rule)
 online_resources('YouTube tutorials, Khan Academy, course forums').
 
-%==============================================================================
-% RULE 24-25: EXAM-SPECIFIC STRATEGY
-%==============================================================================
+
+% --------------------------RULE 24-25: EXAM-SPECIFIC STRATEGY-----------------------------
+
 recommend_exam_strategy :-
     format('🎓 EXAM-SPECIFIC STRATEGY~n', []),
     format('─────────────────────────────────────────────────────────────~n', []),
@@ -322,9 +317,9 @@ time_management_tip('Practice with timer, simulate exam conditions weekly') :-
     time_pressure_panic(yes), !.
 time_management_tip('Allocate time per question/section, leave buffer for review').
 
-%==============================================================================
-% MOTIVATION & WELLNESS TIPS
-%==============================================================================
+
+% ------------------------------MOTIVATION & WELLNESS TIPS-----------------------------------
+
 provide_motivation_tips :-
     format('💡 MOTIVATION & WELLNESS TIPS~n', []),
     format('─────────────────────────────────────────────────────────────~n', []),
@@ -352,8 +347,3 @@ provide_motivation_tips :-
     format('   ✓ Track progress weekly~n', []),
     format('   ✓ Maintain consistent sleep schedule~n', []),
     format('   ✓ Exercise 20-30 minutes daily~n', []).
-
-%==============================================================================
-% END OF KNOWLEDGE BASE
-% Total Rules: 25+ conditional rules with multiple inference paths
-%==============================================================================
